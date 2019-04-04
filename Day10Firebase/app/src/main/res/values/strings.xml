@@ -31,5 +31,7 @@
     <string name="Regist">Regist</string>
     <string name="Login">Login</string>
     <string name="AddOtherNote">Add Other Note</string>
+    <string name="CloudMessage">Cloud Message</string>
+    <string name="GetRegistrationToken">Get Registration Token</string>
 
 </resources>

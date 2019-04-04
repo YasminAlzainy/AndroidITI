@@ -10,7 +10,7 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity implements Communnicator {
 
     private static final String SECOND_FRAGMENT = "Second_Fragment";
-    private SecondFragment secondFragment , firstFragment;
+    private SecondFragment secondFragment, firstFragment;
     public static final String COUNTER = "Counter";
 
     @Override
@@ -19,9 +19,7 @@ public class MainActivity extends AppCompatActivity implements Communnicator {
         setContentView(R.layout.activity_main);
 
 
-        if(savedInstanceState == null)
-        {
-
+        if (savedInstanceState == null) {
             FirstFragment firstFragment = new FirstFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -30,10 +28,8 @@ public class MainActivity extends AppCompatActivity implements Communnicator {
             fragmentTransaction.add(R.id.second, secondFragment, "second");
 
             fragmentTransaction.commit();
-        }
-        else
-        {
-         //  secondFragment = getParent().gw
+        } else {
+            //  secondFragment = getParent().gw
         }
 
     }

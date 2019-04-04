@@ -23,6 +23,9 @@ import java.net.URI;
 import java.util.List;
 import java.util.Locale;
 
+//test
+//48.8679 , 2.7757
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE = 1;
