@@ -25,9 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
-            android:src="@android:drawable/ic_input_add"
-            android:stateListAnimator="@null"
-            />
+            android:src="@drawable/heartbeat"
+            android:stateListAnimator="@null" />
     </FrameLayout>
 
     <android.support.design.widget.NavigationView

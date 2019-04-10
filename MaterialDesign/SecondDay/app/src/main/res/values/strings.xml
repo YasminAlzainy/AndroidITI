@@ -17,4 +17,5 @@
     <string name="android">Android</string>
     <string name="RegistRecycler">Regist Recycler</string>
     <string name="ContentTransition">Content Transition</string>
+    <string name="BackToMain">Back To Main</string>
 </resources>

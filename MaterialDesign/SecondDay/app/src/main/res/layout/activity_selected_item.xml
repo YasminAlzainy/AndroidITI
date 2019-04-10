@@ -11,17 +11,17 @@
     app:layout_anchorGravity="center">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewSelected"
         android:transitionName="profilePic"
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:srcCompat="@android:drawable/checkbox_on_background" />
 
     <TextView
+        android:id="@+id/textViewDaySelected"
         android:transitionName="profileText"
-        android:id="@+id/textViewDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextViewSelected" />
 
 </android.support.v7.widget.CardView>

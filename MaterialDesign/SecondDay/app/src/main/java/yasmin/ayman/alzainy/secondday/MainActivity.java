@@ -1,5 +1,6 @@
 package yasmin.ayman.alzainy.secondday;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this , ContentTransitionActivity.class);
+                startActivity(intent ,  ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
             }
         });
 

@@ -1,9 +1,13 @@
 package yasmin.ayman.alzainy.secondday;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +35,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final MyViewHolder viewHolder, final int i) {
         viewHolder.textView.setText(daysArr[i].getName());
         viewHolder.imageView.setImageResource(daysArr[i].getImag());
 
@@ -43,6 +47,17 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 Toast.makeText(context, "You clicked: "+ toastString + " :)", Toast.LENGTH_SHORT).show();
                 viewHolder.cardView.setCardElevation(50);
                // viewHolder.cardView.setCardBackgroundColor(R.color.colorAccent);
+                Intent intent = new Intent(context, SelectedItemActivity.class);
+                intent.putExtra(SelectedItemActivity.EXTRA_CONTACT, daysArr[i].getName());
+                intent.putExtra(SelectedItemActivity.EXTRA_IMAGE, daysArr[i].getImag());
+
+//                Pair<View, String> p1 = Pair.create((View)viewHolder.imageView, "profilePic");
+//                Pair<View, String> p2 = Pair.create((View)viewHolder.textView, "profileText");
+//                ActivityOptionsCompat options = (ActivityOptionsCompat) ActivityOptionsCompat.
+//                        makeSceneTransitionAnimation(context, p1, p2);
+                ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation((Activity) context, (View)viewHolder.imageView, "profilePic");
+                context.startActivity(intent, options.toBundle());
             }
         });
 

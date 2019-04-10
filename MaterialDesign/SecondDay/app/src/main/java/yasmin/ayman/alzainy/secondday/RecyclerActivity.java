@@ -3,6 +3,9 @@ package yasmin.ayman.alzainy.secondday;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.graphics.Outline;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -27,6 +30,7 @@ public class RecyclerActivity extends AppCompatActivity {
     private NavigationView navigationView;
 
     private FloatingActionButton fab;
+    private AnimationDrawable animation;
 
     public RecyclerActivity() {
         days = new Day[]{new Day("Saterday", "Description ", R.drawable.first),
@@ -38,6 +42,7 @@ public class RecyclerActivity extends AppCompatActivity {
                 new Day("Friday", "Description ", R.drawable.first)
         };
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,26 +68,44 @@ public class RecyclerActivity extends AppCompatActivity {
         });
 
         fab = findViewById(R.id.fab);
+
+
+        // animateDrawble();
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "You clicked Yasmin's FAB! ^_^", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "You clicked Yasmin's FAB! ^_^", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                Drawable drawable = fab.getDrawable();
+                AnimatedVectorDrawable avd = (AnimatedVectorDrawable) drawable;
+                avd.start();
+
                 fab.setCompatElevation(50);
                 fab.setElevation(50);
                 fab.setOutlineProvider(new ViewOutlineProvider() {
                     @Override
                     public void getOutline(View view, Outline outline) {
-                        outline.setRect(5  ,5,5,5);
+                        outline.setRect(5, 5, 5, 5);
                     }
                 });
-
                 animateBtn();
             }
         });
 
 
     }
+
+//    private void animateDrawble() {
+//        fab.setBackgroundResource(R.drawable.fullanimate);
+//        animation = (AnimationDrawable) fab.getBackground();
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                animation.start();
+//            }
+//        });
+//}
 
     private void animateBtn() {
         AnimatorSet animatorSet = new AnimatorSet();

@@ -1,2 +1,0 @@
-SDK Version: 3.10.0.20
-SDK Build Date: Mon Dec 17 19:15:11 UTC 2018
