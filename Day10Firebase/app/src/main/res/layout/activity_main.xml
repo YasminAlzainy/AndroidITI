@@ -11,32 +11,17 @@
         android:id="@+id/btnCloudMessage"
         android:layout_width="114dp"
         android:layout_height="49dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="260dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/CloudMessage"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnSignInGoogle"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="@+id/btnSignInGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignInGoogle"
-        app:layout_constraintVertical_bias="0.141" />
-
-    <Button
-        android:id="@+id/btnSignInGoogle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="404dp"
-        android:background="@android:color/holo_blue_light"
-        android:text="@string/SignInGoogle"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnSignIn"

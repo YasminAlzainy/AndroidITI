@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practice</string>
+    <string name="RecycleView">Recycle View</string>
+    <string name="Avatar">Avatar</string>
+</resources>

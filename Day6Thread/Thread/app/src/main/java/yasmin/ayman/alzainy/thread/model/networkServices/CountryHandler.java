@@ -25,7 +25,6 @@ public class CountryHandler extends AsyncTask<String, Void, Country> {
     @Override
     protected void onPostExecute(Country country) {
         super.onPostExecute(country);
-        jsonPresenter = new JsonPresenterImp(this);
         jsonPresenter.returnCountry(country);
     }
 

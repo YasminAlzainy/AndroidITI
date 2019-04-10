@@ -13,7 +13,6 @@ public class JsonPresenterImp implements Contract.JsonPresenter {
         this.jsonView = jsonView;
     }
 
-
     @Override
     public void returnCountry(Country country) {
         jsonView.setCountryET(country);

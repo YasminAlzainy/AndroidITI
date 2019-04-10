@@ -34,9 +34,9 @@
         </service>
 
         <activity android:name=".cloudMessaging.CloudMessage" />
-        <activity android:name=".NoteBody" />
-        <activity android:name=".ConfirmNoteActivity" />
-        <activity android:name=".NoteActivity" />
+        <activity android:name=".note.NoteBodyActivity" />
+        <activity android:name=".note.ConfirmNoteActivity" />
+        <activity android:name=".note.NoteActivity" />
         <activity android:name=".RealTimeDB" />
         <activity android:name=".SignIn" />
         <activity android:name=".MainActivity">

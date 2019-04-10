@@ -10,7 +10,7 @@ import yasmin.ayman.alzainy.myfirebase.cloudMessaging.CloudMessage;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnSignIn, btnSignInGoogle, btnCloudMessage;
+    private Button btnSignIn, btnCloudMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(cloudMessageIntent);
             }
         });
-
 
     }
 }

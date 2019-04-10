@@ -24,7 +24,6 @@ public class SecondFragment extends Fragment {
     public SecondFragment() {
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,6 +35,7 @@ public class SecondFragment extends Fragment {
         } else {
             counter = 0;
         }
+        changeText(counter);
         return view;
     }
 
@@ -45,15 +45,14 @@ public class SecondFragment extends Fragment {
         outState.putInt(COUNTER, counter);
     }
 
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
 
-    public void changeText(int count) {
-
-        countTextView.setText(Integer.toString(count));
+    public void changeText(int countRemote) {
+        counter = countRemote;
+        countTextView.setText(Integer.toString(countRemote));
     }
 
 }

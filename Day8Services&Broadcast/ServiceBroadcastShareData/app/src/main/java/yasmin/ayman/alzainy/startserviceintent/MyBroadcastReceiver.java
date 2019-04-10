@@ -12,7 +12,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 
         Intent receiveImageIntent = new Intent(context.getApplicationContext(), ReceiveImage.class);
         receiveImageIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra("imgFile", imgUrl);
+        receiveImageIntent.putExtra("imgFile", imgUrl);
         context.startActivity(receiveImageIntent);
     }
 }

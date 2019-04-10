@@ -1,7 +1,6 @@
 package yasmin.ayman.alzainy.myfirebase;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,13 +8,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import yasmin.ayman.alzainy.myfirebase.note.ConfirmNoteActivity;
+import yasmin.ayman.alzainy.myfirebase.note.Note;
+import yasmin.ayman.alzainy.myfirebase.note.NoteActivity;
+import yasmin.ayman.alzainy.myfirebase.note.NoteBodyActivity;
 
 public class RealTimeDB extends AppCompatActivity {
 
@@ -82,7 +85,7 @@ public class RealTimeDB extends AppCompatActivity {
                 String user = note.getUser();
                 String body = note.getBody();
 
-                Intent intent = new Intent(RealTimeDB.this, NoteBody.class);
+                Intent intent = new Intent(RealTimeDB.this, NoteBodyActivity.class);
                 intent.putExtra(NOTE_USER, user);
                 intent.putExtra(NOTE_TITLE, title);
                 intent.putExtra(NOTE_BODY, body);
